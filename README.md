@@ -37,6 +37,7 @@ npm start or npm run dev
 - Validation layer for reuse of validations;
 - Some hooks to help with API calls and form submissions;
 - Private route configured;
+- Reuseable Templates
 - Three pages to help improve productivity:
   - Login page
   - Sign up page
@@ -118,6 +119,7 @@ src/
       fonts/
       images/
     components/
+      Template/
     hooks/
     pages/
     protocols/
@@ -147,9 +149,28 @@ It is a registration page with a form that receives the username, email, passwor
 
 🖥️ **Dashboard page**
 
-It is an empty page that is redirected after successful login. It's there to help with development, saving time by being the starting point.
+It is an empty page that is redirected after successful login. It's there to help with development, saving time by being the starting point. To use Dashboard page directly. 
 
-![Dashboard page](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fxpg1sfmkt1dkfv12pbm.png)
+
+![Dashboard page](https://user-images.githubusercontent.com/103619560/278458192-2b84f9c0-55fd-4689-b34f-d1366cb3d459.png)
+
+```
+  main/
+    routes/
+      router.tsx
+```
+Follow the above file path and update this
+
+```javascript
+    <PrivateRoute exact path="/" component={makeDashboard} />
+```
+To
+```
+    <Route exact path="/" component={makeDashboard} />
+```
+
+if your a contributor, after finishing up your work. Make sure to update it as **PrivateRoute** before raising the PR.
+
 
 <hr />
 <br />
