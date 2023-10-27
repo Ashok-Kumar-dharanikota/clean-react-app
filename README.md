@@ -149,8 +149,7 @@ It is a registration page with a form that receives the username, email, passwor
 
 🖥️ **Dashboard page**
 
-It is an empty page that is redirected after successful login. It's there to help with development, saving time by being the starting point. To use Dashboard page directly. 
-
+It is an empty page that is redirected after successful login. It's there to help with development, saving time by being the starting point. To use Dashboard page directly.
 
 ![Dashboard page](https://user-images.githubusercontent.com/103619560/278458192-2b84f9c0-55fd-4689-b34f-d1366cb3d459.png)
 
@@ -159,18 +158,20 @@ It is an empty page that is redirected after successful login. It's there to hel
     routes/
       router.tsx
 ```
+
 Follow the above file path and update this
 
 ```javascript
-    <PrivateRoute exact path="/" component={makeDashboard} />
+<PrivateRoute exact path="/" component={makeDashboard} />
 ```
+
 To
-```
+
+```javascript
     <Route exact path="/" component={makeDashboard} />
 ```
 
 if your a contributor, after finishing up your work. Make sure to update it as **PrivateRoute** before raising the PR.
-
 
 <hr />
 <br />
